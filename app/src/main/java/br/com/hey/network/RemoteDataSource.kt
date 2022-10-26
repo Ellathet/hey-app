@@ -24,6 +24,7 @@ class RemoteDataSource(private val apiService: IApiService) {
                     } else {
                         val responseErrorString = response.errorBody()?.string()
                         val response = Gson().fromJson(responseErrorString, ErrorResponse::class.java)
+
                     }
                 }
 
